@@ -1,0 +1,391 @@
+
+/*google font imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Kanit:wght@100;700;800&display=swap');
+
+
+/*******Header*******/
+
+/*Background styling and creation*/
+
+header {
+background:url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/chessboxing/chessboxing_background.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+height:250px;
+background-position:center;
+}
+
+  /* main heading positioninig in line with text and styling as per spec*/
+
+h1{
+font-size:70px;
+font-family:Kanit, "Times New Roman", sans-serif, serif;
+font-weight:bold;
+color:#eeeeee;
+width:680px;
+padding-top:40px;
+margin:0 auto 0 auto;
+}
+
+/*Header positioning*/
+
+.header {
+      position:relative;
+}
+
+/***********NavBar*************/
+
+
+/*Nav Bar positiining and styling*/
+
+nav {
+font-size:20px;
+font-family:Kanit, "Times New Roman", sans-serif, serif;
+font-weight:bold;
+}
+
+.nav {
+position:absolute;
+bottom:0;
+right:0;
+overflow:hidden;
+}
+
+nav li {
+float:left;
+padding-right:60px;
+}
+
+
+.nav a {
+color:#eeeeee;
+text-align:center;
+text-decoration:none;
+white-space:nowrap;
+display:block;
+}
+
+  
+/*Styling to create nav bar hover and colour*/
+
+.nav a:hover{
+color:#ffff03;
+background-color:rgba(255, 255, 255, 0.486);
+opacity:1;
+}
+
+
+/*** Styling and HTML influenced by lectures and demonstrations of Dr. Harold Fellermann at Newcastle University***/
+
+/*****Image*****/
+
+/*image positioning and figure positininig to create text wrap around and borders as per spec*/
+
+.Chessboxing{
+float:right;
+padding:26px;
+width:352px;
+height:270px;
+border:3px solid rgb(211, 205, 205);
+text-align:center;
+border-radius:20px;
+padding-bottom: 35px;
+padding-right: 45px;
+}
+
+.Chessboxing figcaption {
+width:380px;
+}
+
+.Chessboxing img {
+width:356px;
+height:248px;
+}
+
+/***** Video ************/
+
+/* Video styling and positioning*/
+
+.video iframe {
+width:340px;
+height:calc(360px *9 / 16);
+}
+
+.video {
+float:right;
+text-align:center;
+border:3px solid rgb(211, 205, 205);
+border-radius:20px;
+padding:10px;   
+}
+
+.video figcaption {
+width:330px;
+font-style:italic;
+}
+
+/********Table and Map********/
+
+/* table figure styling*/
+
+.TableAndMap {
+border:3px solid rgb(211, 205, 205);
+border-radius:20px;
+padding:10px;
+height:380px;
+margin:0 auto 0 auto;
+padding-bottom: 60px;
+}
+
+/*Map image styling and positioning*/
+
+.TableAndMap img {
+padding-top:40px;
+padding-bottom:10px;
+width:50%;
+height:230px;    
+}
+
+/* Table styling and positioning */
+
+.TableAndMap caption {
+text-align:center;
+}    
+
+table {
+width:50%;
+height:50%;
+border-collapse:collapse; 
+float:left;
+}
+
+td {
+padding:5px;
+}
+
+/*Table border and caption styling  as per spec*/
+
+table caption {
+text-align:center;
+font-style:italic;
+border-bottom:2px solid rgb(211, 205, 205);
+}
+
+tr+tr td{
+border-top:1px solid rgb(211, 205, 205);
+}
+
+tbody>:nth-child(9){
+border-bottom:2px solid rgb(211, 205, 205);
+}
+    
+tbody>tr>:nth-child(1){ 
+column-width:50px;
+}
+
+th{
+border-bottom:2px solid rgb(211, 205, 205);
+}
+
+/*********Page Layout*********/ 
+
+/* General page layout for main, body and h2*/
+section {
+position:relative; 
+}
+
+body {
+max-width:90ch;
+margin:0 auto;
+font-family:Crimson Text,"Times New Roman", sans-serif, serif;
+color:black;
+font-size:14pt;
+}
+
+nav ul {
+list-style-type: none;
+padding:0;
+}
+
+main {
+margin:0 3rem 0  3rem;
+}
+
+h2 {
+font-family:Kanit;
+color:#5f7290;
+}
+
+/*Footer styling as per spec*/
+
+footer {
+background-color:black;
+text-align:center;
+padding:2em;
+font-size:12pt;
+color:blanchedalmond;
+margin:0 auto 0 auto;
+}
+
+footer a {
+color:inherit;
+}
+
+/******Section specific style changes*******/
+
+/*Creation of space between bullet points for stylistic reasons*/
+
+#sec_training li{
+margin:10px 0;
+}
+
+#sec_rules li{
+margin:10px 0;
+}
+
+  /*italics for quote in appropriate section*/
+
+#sec_ManVMachine i{
+font-style:normal;
+}
+
+.italics {
+font-style:italic;
+}
+
+/********* Heading Chess Pieces *******/
+
+/*creation of ches pieces and alteration of size to meet spec*/
+
+
+#sec_history h2::before{
+content:"\2655";
+font-size:45px;
+}
+
+#sec_rules h2::before{
+content:"\265a";
+font-size:45px;
+}
+    
+#sec_training h2::before{
+content:"\2656";
+font-size:45px;
+}
+
+#sec_ManVMachine h2::before{
+content:"\265d";
+font-size:45px;
+}
+
+#sec_ManVMachine {
+padding-bottom:50px;
+}
+
+/*****Additional Media Queries for smaller device*********/
+
+/*smaller devices which start at 480px*/
+
+
+@media screen and (max-width: 800px) {
+  
+/*Navigation Bar properties to move the bar to the right of the page on smaller screens*/
+  
+nav li {
+float:inherit;
+padding-right:60px;
+}
+
+.nav a {
+float:inherit;
+text-align:right;
+}
+
+/*Table and Map figure readjustment*/
+
+.TableAndMap {
+height:740px;
+width:100%;
+text-align:center;
+}
+
+.TableAndMap img {
+width:460px;
+height:350px;
+padding-top:0;
+}
+
+table {
+width:100%;
+}
+
+
+/*Font size adjustment, original font too small for smaller device screens*/
+
+    
+main {
+font-size:18px;
+        
+}
+
+/*body positioning in centre of page*/
+   
+body{
+position:absolute;
+overflow-x:hidden;
+}
+
+/*Header adjustment*/
+
+h1 {
+width:520px;
+font-size:45px;
+}
+
+/*Figure adjustment to prevent text wrap around*/
+
+.Chessboxing{
+padding:36px;
+width:352px;
+height:270px;
+border:3px solid rgb(211, 205, 205);
+text-align:center;
+border-radius:20px;
+}
+
+    /*Video size and position adjustment to centre in page and prevent text wrap around */
+
+.video iframe {
+width:350px;
+height:calc(360px *9 / 16);
+text-align:center;
+}
+
+.video {
+text-align:center;
+width:450px;
+}
+
+.video figcaption {
+font-style:italic;
+text-align:center;
+padding-left:45px;
+} 
+}
+
+    
+       
+        
+   
+        
+    
+        
+    
+
+    
+    
+
+     
+
